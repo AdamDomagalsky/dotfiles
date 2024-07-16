@@ -127,6 +127,9 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+# few aws helpers
+export PATH="$HOME/git/tools/aws-tools:$PATH"
+
 # https://gist.github.com/AppleBoiy/04a249b6f64fd0fe1744aff759a0563b
 alias ls='eza'
 alias l='eza -lbF --git'
