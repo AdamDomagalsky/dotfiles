@@ -15,7 +15,7 @@ export ZSH=$HOME/.oh-my-zsh
 # load a random theme each time Oh My Zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+# ZSH_THEME="robbyrussell"
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Set list of themes to pick from when loading at random
@@ -79,6 +79,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
+  aws
   git
   golang
   helm
@@ -128,8 +129,12 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # few aws helpers
-export PATH="$HOME/git/tools/aws-tools:$PATH"
-
+export PATH="$HOME/git/tools/helmctl:$HOME/git/tools/aws-tools:$PATH"
+export PYTHONPATH="$HOME/git/tools/helmctl:$HOME/git/tools/aws-tools:$PYTHONPATH"
+export AWS_DEFAULT_REGION=eu-west-1
+export AWS_REGION=eu-west-1
+export AWS_PROFILE=cloud-dev_temp
+# export AWS_CONFIG_FILE=~/.aws/NOTHING
 
 # https://gist.github.com/AppleBoiy/04a249b6f64fd0fe1744aff759a0563b
 alias ls='eza'
