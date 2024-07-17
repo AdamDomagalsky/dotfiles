@@ -1,6 +1,6 @@
 #! /bin/bash
 
-DOTFILES=(.gitignore .zshrc .p10k.zsh)
+DOTFILES=(.gitignore .zshrc .p10k.zsh .terragrunt_aliases .terraform_aliases)
 
 for dotfile in $(echo ${DOTFILES[*]});
 do

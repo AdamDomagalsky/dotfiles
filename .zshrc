@@ -130,6 +130,7 @@ export NVM_DIR="$HOME/.nvm"
 # few aws helpers
 export PATH="$HOME/git/tools/aws-tools:$PATH"
 
+
 # https://gist.github.com/AppleBoiy/04a249b6f64fd0fe1744aff759a0563b
 alias ls='eza'
 alias l='eza -lbF --git'
@@ -153,6 +154,21 @@ alias lx='eza -lbhHigUmuSa@ --time-style=long-iso --git --color-scale --color=al
 alias lS='eza -1 --color=always --group-directories-first --icons'
 alias lt='eza --tree --level=2 --color=always --group-directories-first --icons'
 alias l.="eza -a | grep -E '^\.'"
+
+# kubectl aliases
+autoload -Uz compinit
+compinit
+alias k=kubectl
+source <(kubectl completion zsh)
+compdef k='kubectl'
+
+# Terraform aliases
+[ -f ~/.terraform_aliases ] && source ~/.terraform_aliases
+function terraform() { echo "+ terraform $@"; command terraform $@; }
+
+# Terragrunt aliases
+[ -f ~/.terragrunt_aliases ] && source ~/.terragrunt_aliases
+function terragrunt() { echo "+ terragrunt $@"; command terragrunt $@; }
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
