@@ -151,6 +151,9 @@ alias lS='eza -1 --color=always --group-directories-first --icons'
 alias lt='eza --tree --level=2 --color=always --group-directories-first --icons'
 alias l.="eza -a | grep -E '^\.'"
 
+# https://github.com/sharkdp/bat?tab=readme-ov-file#installation
+alias cat="bat --theme=\$(defaults read -globalDomain AppleInterfaceStyle &> /dev/null && echo default || echo GitHub)"
+alias fzfp='fzf --preview "bat --style numbers --color always {}"'
 # kubectl aliases
 autoload -Uz compinit
 compinit
