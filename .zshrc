@@ -154,6 +154,13 @@ alias l.="eza -a | grep -E '^\.'"
 # https://github.com/sharkdp/bat?tab=readme-ov-file#installation
 alias cat="bat --theme=\$(defaults read -globalDomain AppleInterfaceStyle &> /dev/null && echo default || echo GitHub)"
 alias fzfp='fzf --preview "bat --style numbers --color always {}"'
+alias vfzf='nvim -o `fzf`'
+alias fzfv='nvim -o `fzf`'
+alias vi="nvim"
+alias vim="nvim"
+alias view="nvim -R"
+alias vimdiff="nvim -d"
+
 # kubectl aliases
 autoload -Uz compinit
 compinit
