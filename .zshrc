@@ -138,19 +138,10 @@ export AWS_PROFILE=cloud-dev_temp
 
 # https://gist.github.com/AppleBoiy/04a249b6f64fd0fe1744aff759a0563b
 alias ls='eza'
-alias l='eza -lbF --git'
-alias ll='eza -lbGF --git'
-alias llm='eza -lbGd --git --sort=modified'
-alias la='eza -lbhHigUmuSa --time-style=long-iso --git --color-scale'
-alias lx='eza -lbhHigUmuSa@ --time-style=long-iso --git --color-scale'
-
-# specialty views
-alias lS='eza -1'
-alias lt='eza --tree --level=2'
-alias l.="eza -a | grep -E '^\.'"
 # Advanced
 alias ls='eza --color=always --group-directories-first --icons'
-alias ll='eza -la --icons --octal-permissions --group-directories-first'
+alias lg='eza -la --icons --group-directories-first --no-user --git --git-ignore --no-permissions'
+alias ll='eza -la --icons --octal-permissions --group-directories-first --no-user'
 alias l='eza -bGF --header --git --color=always --group-directories-first --icons'
 alias llm='eza -lbGd --header --git --sort=modified --color=always --group-directories-first --icons' 
 alias la='eza --long --all --group --group-directories-first'
